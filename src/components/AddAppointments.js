@@ -1,20 +1,61 @@
 import React, {Component} from 'react';
-import { FaPlus } from 'react-icons/fa'
+import {FaPlus} from 'react-icons/fa'
 
 class AddAppointments extends Component {
+	constructor() {
+		super();
+		this.state = {
+			customerName: '',
+			aptDate: '',
+			aptTime: '',
+			aptNotes: ''
+		}
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleChange(e) {
+		const value = e.target.value
+		const name = e.target.name
+		this.setState({
+			[name]: value
+		})
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
+		let tempApt = {
+			customerName: this.state.customerName,
+			aptDate: this.state.aptDate,
+			aptTime: this.state.aptTime,
+			aptNotes: this.state.aptNotes
+		}
+		this.props.addAppointment(tempApt)
+		this.setState({
+			customerName: '',
+			aptDate: '',
+			aptTime: '',
+			aptNotes: ''
+		})
+		this.props.toggleForm();
+	}
+
 	render() {
-		const displayApt= this.props.formDisplay ? '' : 'add-appointment'
+		const displayApt = this.props.formDisplay ? '' : 'add-appointment'
 		return (
 			<div>
 				<div
 					className={displayApt}
 				>
-					<div className="apt-addheading card-header bg-primary text-white">
-						<FaPlus /> Add Appointment
+					<div
+						className="apt-addheading card-header bg-primary text-white"
+						onClick={this.props.toggleForm}
+					>
+						<FaPlus/> Add Appointment
 					</div>
 
 					<div className="card-body">
-						<form id="aptForm" noValidate>
+						<form id="aptForm" noValidate onSubmit={this.handleSubmit}>
 							<div className="form-group form-row">
 								<label
 									className="col-md-2 col-form-label text-md-right"
@@ -28,6 +69,8 @@ class AddAppointments extends Component {
 										className="form-control"
 										name="customerName"
 										placeholder="Customer's Name"
+										value={this.state.customerName}
+										onChange={this.handleChange}
 									/>
 								</div>
 							</div>
@@ -45,6 +88,8 @@ class AddAppointments extends Component {
 										className="form-control"
 										name="aptDate"
 										id="aptDate"
+										value={this.state.aptDate}
+										onChange={this.handleChange}
 									/>
 								</div>
 								<label
@@ -59,6 +104,8 @@ class AddAppointments extends Component {
 										className="form-control"
 										name="aptTime"
 										id="aptTime"
+										value={this.state.aptTime}
+										onChange={this.handleChange}
 									/>
 								</div>
 							</div>
@@ -75,6 +122,8 @@ class AddAppointments extends Component {
 					  name="aptNotes"
 					  id="aptNotes"
 					  placeholder="Appointment Notes"
+					  value={this.state.aptNotes}
+					  onChange={this.handleChange}
 				  />
 								</div>
 							</div>

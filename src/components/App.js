@@ -16,6 +16,24 @@ class App extends React.Component {
 			lastIndex: 0,
 		}
 		this.deleteAppointment = this.deleteAppointment.bind(this)
+		this.toggleForm = this.toggleForm.bind(this)
+		this.addAppointment = this.addAppointment.bind(this)
+	}
+
+	toggleForm() {
+		this.setState({
+			formDisplay: !this.state.formDisplay
+		})
+	}
+
+	addAppointment(apt) {
+		let tempApts = this.state.myAppointments;
+		apt.aptId = this.state.lastIndex;
+		tempApts.unshift(apt)
+		this.setState({
+			myAppointment: tempApts,
+			lastIndex: this.state.lastIndex + 1
+		})
 	}
 
 	deleteAppointment(apt) {
@@ -41,8 +59,6 @@ class App extends React.Component {
 			})
 	}
 
-
-
 	render() {
 		return (
 			<div className='App'>
@@ -53,6 +69,8 @@ class App extends React.Component {
 								<div>
 									<AddAppointments
 										formDisplay={this.state.formDisplay}
+										toggleForm={this.toggleForm}
+										addAppointment={this.addAppointment}
 									/>
 								</div>
 								<div><h1>Search Appointments</h1></div>
