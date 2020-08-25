@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tennis-court-booking/precache-manifest.d6122d592353e5ca753ee16fc2f25715.js"
+  "/tennis-court-booking/precache-manifest.510ad523d46639fce45c0be2d89d61e7.js"
 );
 
 self.addEventListener('message', (event) => {
