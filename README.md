@@ -1,9 +1,10 @@
 # Appointment booing page
-React application is built for tennis court booking <br/>
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/papagoal/tennis-court-booking/blob/master/LICENSE)
+React application is built for tennis court booking <br/>
 
 ## About
 A react appliction to help orangizer to deal with tennis court appointment booking (WIP)
+User will be able to add, remove, sort, search appointment for different time.
 
 ## Demo
 https://papagoal.github.io/tennis-court-booking/
@@ -22,6 +23,7 @@ npm start
 ## Features
 - List appointments
 - Adding input form for new appointment
+- Remove specific one of appointments
 - Sort the list of appointment 
 - Search the specific appointment by customer name or note
 
