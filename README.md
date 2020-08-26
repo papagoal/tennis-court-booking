@@ -13,6 +13,13 @@ https://papagoal.github.io/tennis-court-booking/
 npm i
 ```
 
+## Features
+- List appointments
+- Adding input form for new appointment
+- Sort the list of appointment 
+- Search the specific appointment by customer name or note
+
+
 ## Author
 - [Dan Liu](https://www.fightdan.com)
 
