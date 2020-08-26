@@ -1,6 +1,6 @@
 
 # Appointment booing page
-[!Github license](https://github.com/papagoal/tennis-court-booking/blob/master/LICENSE)
+[![Github license]](https://github.com/papagoal/tennis-court-booking/blob/master/LICENSE)
 A react appliction to help orangizer to deal with tennis court appointment booking (WIP)
 
 ## Demo
