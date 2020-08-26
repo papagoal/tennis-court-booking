@@ -1,5 +1,7 @@
 https://papagoal.github.io/tennis-court-booking/
 
+![Screenshot](./assets/appointment-booking.png)
+
 ## Author
 - [Dan Liu](https://www.fightdan.com)
 
