@@ -1,6 +1,6 @@
 # Appointment booing page
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/papagoal/tennis-court-booking/blob/master/LICENSE)
-React application is built for tennis court booking <br/>
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/papagoal/tennis-court-booking/blob/master/LICENSE) <br/>
+React application is built for tennis court booking
 
 ## About
 A react appliction to help orangizer to deal with tennis court appointment booking (WIP)
